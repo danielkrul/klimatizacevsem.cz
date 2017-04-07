@@ -1,0 +1,750 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../css/opensans.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('../css/opensans-light.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #000;
+    background: #fff;
+    font-smoothing: antialiased;
+    min-height: 100%;
+    min-width: 1200px;
+}
+div#panel_up {
+    background: #353230;
+    width: 100%;
+    height: 2.5em;
+    font-size: 0.9em;
+}
+div#panel_up .right {
+    float: right;
+    height: 100%;
+    display: table;
+}
+div#panel_up .left {
+    float: left;
+    height: 100%;
+    display: table;
+}
+div#panel_up .left a,
+div#panel_up .right a {
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 1em;
+    padding-left: 1em;
+    text-decoration: none;
+    transition: background 0.5s;
+    border-left: 1px solid #424242;
+}
+div#panel_up .left a:hover,
+div#panel_up .right a:hover {
+    background: #444;
+}
+div#panel_up .right .login {
+    background: url('../design/icons/login.png') 0 50% no-repeat;
+    background-size: 25px 25px;
+    padding-left: 2em;
+}
+div#panel_up .right .logout {
+    background: url('../design/icons/logout.png') 0 50% no-repeat;
+    background-size: 20px 20px;
+    padding-left: 2em;
+}
+div#panel_up .right .logout:hover {
+    background: url('../design/icons/logout.png') 0 50% no-repeat;
+    background-size: 20px 20px;
+    text-decoration: underline;
+}
+div#panel_up .right .login:hover {
+    background: url('../design/icons/login.png') 0 50% no-repeat;
+    background-size: 25px 25px;
+    text-decoration: underline;
+}
+div#panel_up .right .password {
+    background: url('../design/icons/password.png') 0 50% no-repeat;
+    background-size: 20px 20px;
+    padding-left: 2em;
+}
+div#panel_up .right .password:hover {
+    background: url('../design/icons/password.png') 0 50% no-repeat;
+    background-size: 20px 20px;
+    text-decoration: underline;
+}
+header#header {
+    width: 100%;
+    margin-bottom: 1em;
+}
+header#header div#logo {
+    float: left;
+    margin-top: 0.3em;
+    margin-left: 3em;
+}
+header#header div#logo img {
+    width: 250px;
+}
+header#header div#shopping_cart {
+    position: absolute;
+    top: 2.5em;
+    right: 0;
+    padding-right: 20px;
+    min-height: 80px;
+    display: table;
+    transition: background 0.3s;
+}
+
+header#header div#shopping_cart:hover{
+    background: lightgray;
+}
+
+header#header div#shopping_cart a{
+    color: black;
+}
+header#header div#shopping_cart .img{
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 1em;
+}
+
+header#header div#shopping_cart .img img{
+    width: 50px;
+}
+
+div#shopping_cart p {
+    display: table-cell;
+    vertical-align: middle;
+}
+div#shopping_cart button {
+    background: url('../design/icons/buy.png') 50% 50% no-repeat;
+    background-size: 35px 35px;
+    padding: 2em;
+    border: 0;
+}
+div#shopping_cart button:focus {
+    outline: 0;
+}
+div#shopping_cart button:hover {
+    cursor: pointer;
+}
+div#main {
+    width: 92%;
+    margin-top: 1em;
+    margin: 0 auto;
+}
+div#main .menu {
+    float: left;
+}
+
+div#main .menu ul{
+    float: left;
+}
+
+div#main .menu ul li {
+    position: relative;
+    list-style-type: none;
+}
+
+div#main .menu ul li div.inner{
+    position: absolute;
+    width: 100%;
+    background: white;
+    right: -100%;
+    z-index: 10;
+    visibility: hidden;
+}
+
+div#main .menu ul li:hover > div.inner{
+    visibility: visible;
+}
+
+
+div#main .menu ul li div.inner span{
+    display: block;
+    text-align: center;
+    margin-left: 0.5em;
+}
+
+div#main .menu ul li div.inner span a{
+    padding: 0.5em;
+}
+
+div#main .menu ul li a {
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+    background: #022492 url('../design/icons/arrow.png') 95% 50% no-repeat;
+    background-size: 20px 20px;
+    padding: 1em 5em 1em 5em;
+    color: white;
+    border-bottom: 1px solid white;
+    transition: background-color 0.5s;
+}
+div#main .menu a:hover {
+    background-color: #021D47;
+}
+
+div#main .menu ul li a.func{
+    position: absolute;
+    padding: 0;
+    z-index: 10;
+    background: none;
+    border: none;
+    top: 25%;
+    left: 5%;
+}
+
+div#main .menu h2 {
+    text-align: center;
+    margin-top: 1em;
+    font-weight: normal;
+    background: #323232;
+    border-radius: 2px;
+    color: white;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.2em;
+}
+div#main .menu h2 .edit {
+    background: none;
+    padding: 0;
+    display: inline;
+}
+div#main .menu h2 .edit img {
+    float: right;
+    margin-right: 0.5em;
+}
+div#main .menu .info {
+    margin-top: 1em;
+}
+div#main .menu .info span.place,
+div#main .menu .info span.email,
+div#main .menu .info span.name,
+div#main .menu .info span.phone {
+    display: block;
+    text-align: center;
+    margin-top: 0.7em;
+}
+div#main .menu .info span.place img,
+div#main .menu .info span.name img,
+div#main .menu .info span.email img,
+div#main .menu .info span.phone img {
+    float: left;
+}
+
+div#main .menu .info span.youtube img{
+    display: block;
+    margin: 0 auto;
+}
+
+div#main .menu .info span.ico p:nth-child(1) {
+    float: left;
+    font-weight: bold;
+}
+div#main .menu .info span.ico p:nth-child(2) {
+    text-align: center;
+}
+div#main .items {
+    float: right;
+    width: 75%;
+}
+
+div#main .items .add{
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+div#main .items .add a{
+    border-radius: 2px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 0;
+    margin-top: 1em;
+    background-color: #2196F3;
+    transition: background-color 0.3s;
+    margin-right: 1em;
+    color: #fff;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#main .items .add a:hover{
+    background-color: #51adf6;
+}
+
+div#main .items .itemInfo {
+
+}
+div#main .items .itemInfo h1 {
+    padding-bottom: 0.4em;
+    border-bottom: 1px dotted silver;
+    position: relative;
+    font-size: 1.6em;
+}
+div#main .items .itemInfo h1 .rightHome {
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+div#main .items .itemInfo .category_tree {
+    width: 100%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+div#main .items .itemInfo .category_tree menu{
+    background: #c0c0c0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+}
+
+div#main .items .itemInfo .category_tree menu a{
+    color: black;
+    font-size: 1.1em;
+    margin-right: 0.5em;
+    text-decoration: none;
+}
+
+div#main .items .itemInfo .category_tree menu a:hover{
+    text-decoration: underline;
+}
+
+div#main .items .itemInfo .left {
+    float: left;
+    width: 48%;
+    max-width: 48%;
+}
+div#main .items .itemInfo .left img {
+    width: 320px;
+    height: 290px;
+    margin: 0 auto;
+    display: block;
+}
+div#main .items .itemInfo .left .video{
+    margin-top: 4em;
+}
+div#main .items .itemInfo .left .video iframe {
+    width: 100%;
+}
+div#main .items .itemInfo .right {
+    float: right;
+    width: 48%;
+    max-width: 48%;
+}
+div#main .items .itemInfo hr {
+    margin-top: 1em;
+    background-color: silver;
+    height: 1px;
+    border: 0;
+}
+div#main .items .itemInfo .right table {
+    margin-top: 1em;
+    width: 100%;
+}
+div#main .items .itemInfo .right table tr td.price {
+    float: right;
+    color: #BB1200;
+    font-size: 1.7em;
+}
+div#main .items .itemInfo .right table tr td.dph {
+    float: right;
+    font-size: 1.1em;
+}
+div#main .items .itemInfo .right .all {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 1em;
+    background: #c0c0c0;
+}
+div#main .items .itemInfo .right .all table {
+    padding-top: 1em;
+    width: 90%;
+    margin: 0 auto;
+}
+div#main .items .itemInfo .right .all table tr td.stock {
+    float: right;
+}
+div#main .items .itemInfo .right .all table tr td.number {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    float: right;
+}
+div#main .items .itemInfo .right .all table tr td.number input {
+    width: 50px;
+    text-align: center;
+}
+div#main .items .itemInfo .right .all table tr td.number button {
+    border-radius: 2px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 0;
+    background-color: #2196F3;
+    transition: background-color 0.3s;
+    color: #fff;
+    padding: 0.7em;
+    font-weight: bold;
+}
+div#main .items .itemInfo .right .all table tr td.number button:hover {
+    background-color: #51adf6;
+}
+
+div#main .items .itemInfo .bigPanel{
+    width: 100%;
+    margin-top: 3em;
+}
+
+div#main .items .itemInfo .bigPanel #content{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+div#main .items .itemInfo .bigPanel .panels{
+    text-align: center;
+}
+
+div#main .items .itemInfo .bigPanel .panels a{
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+}
+
+div#main .items .itemInfo .bigPanel .panels a:hover{
+    /*text-decoration: underline;*/
+}
+
+div#main .items .itemInfo .innerBig{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#main .items .itemInfo .innerBig .center{
+    width: 100%;
+    text-align: center;
+    margin-top: 3em;
+}
+
+div#main .items .itemInfo .innerBig .center a.add{
+    border-radius: 2px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 0;
+    margin-top: 1em;
+    background-color: #2196F3;
+    transition: background-color 0.3s;
+    margin-right: 1em;
+    color: #fff;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#main .items .itemInfo .innerBig .center a:hover{
+    background-color: #51adf6;
+}
+
+div#main .items .itemInfo .innerBig .innerItem{
+    width: calc(70% / 3);
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1em;
+    transition: background 0.3s;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+div#main .items .itemInfo .innerBig .innerItem img.up{
+    width: 60px;
+}
+
+div#main .items .itemInfo .innerBig .innerItem a{
+    color: #666666;
+    text-decoration: none;
+}
+
+div#main .items .itemInfo .innerBig .innerItem a h2{
+    font-size: 1.2em;
+}
+
+div#main .items .itemInfo .innerBig .innerItem:hover{
+    background: #9E9E9E;
+}
+
+div#main .items .itemInfo .innerBig .innerItem:hover > a{
+    color: white;
+}
+
+div#main .items .sort{
+
+}
+
+div#main .items .sort select {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+div#main .items .sort button {
+    background: black;
+    border: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: white;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+div#main .items .itemsSorted {
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.error{
+    margin-top: 1em;
+    text-align: center;
+    min-width: 100%;
+    color: red;
+}
+
+div#main .items .itemsSorted div {
+    width: 32%;
+    margin-bottom: 1em;
+}
+div#main .items .itemsSorted div:hover {} div#main .items .itemsSorted div .image {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 0.5em;
+}
+div#main .items .itemsSorted div .image .star {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+div#main .items .itemsSorted div .name {
+    font-weight: bold;
+    text-align: center;
+}
+div#main .items .itemsSorted div .name {
+    font-weight: bold;
+    text-align: center;
+}
+div#main .items .itemsSorted div .caption {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+div#main .items .itemsSorted div .button {
+    width: 100%;
+}
+div#main .items .itemsSorted div .popularity {
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+div#main .items .itemsSorted div .popularity img {
+    margin-right: 0.1em;
+}
+div#main .items .itemsSorted div .button .price {
+    float: left;
+    margin-left: 2em;
+    color: #BB1200;
+    font-size: 1.2em;
+}
+div#main .items .itemsSorted div .button a {
+    color: white;
+    text-decoration: none;
+    background: #a90329; /* Old browsers */
+    background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    transition: background 0.5s;
+    float: right;
+}
+div#main .items .itemsSorted div .button a:hover {
+    
+} 
+div#main .items .article h1.head {
+    padding-bottom: 0.4em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px dotted silver;
+    position: relative;
+    font-size: 1.6em;
+}
+div#main .items .article h1 .right {
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+div#main .items .article .edit_title {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px dotted silver;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.5em;
+}
+div#main .items .article .edit_content {
+    padding: 10px;
+    width: 100%;
+    min-height: 300px;
+}
+div#main .items .article button.butt {
+    border-radius: 2px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 0;
+    margin-top: 1em;
+    background-color: #2196F3;
+    transition: background-color 0.3s;
+    margin-right: 1em;
+    color: #fff;
+    padding: 1em;
+    font-weight: bold;
+}
+div#main .items .article button img {
+    margin-right: 0.5em;
+}
+div#main .items .article button:hover {
+    background-color: #51adf6;
+}
+
+div#main .items .article .cart_table{
+    width: 90%;
+    padding-top: 1em;
+    margin: 0 auto;
+}
+
+div#main .items .article .cart_table table{
+    width: 100%;
+    text-align: left;
+}
+
+div#main .items .article .cart_table table thead tr{
+    border-bottom: 1px solid gray;
+}
+
+div#main .items .article .cart_table table thead tr th{
+    color: #757575;
+}
+
+div#main .items .article .cart_table table tbody td{
+    padding-top: 1em;
+}
+
+div#ego{
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 40%;
+}
+
+footer#footer {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    margin-top: 3em;
+    background: black;
+    opacity: 0.9;
+}
+footer#footer .left {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    color: white;
+    padding-left: 1em;
+    float: left;
+}
+footer#footer .right {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    color: white;
+    padding-right: 2em;
+    padding-left: 2em;
+    float: right;
+    text-align: left;
+}
+footer#footer .right p{
+    margin-bottom: 0.2em;
+}
+#visibilityContainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.90);
+    top: 0;
+    z-index: 20;
+}
+#visibilityContainer .center {
+    position: relative;
+    top: 50%;
+    width: 70%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: 0 auto;
+    padding-bottom: 1em;
+    background: white;
+    overflow: auto;
+    max-height: 95%;
+}
+#visibilityContainer .center h2 {
+    text-align: center;
+    padding-top: 0.5em;
+}
+#visibilityContainer .center h2 .close {
+    float: right;
+    margin-right: 1em;
+}
+#visibilityContainer .center table {
+    margin: 0 auto;
+    padding-top: 0.5em;
+}
+#visibilityContainer .center table tr td {
+    padding-left: 1em;
+    padding-top: 1em;
+}
+#visibilityContainer .center input {
+    padding: 0.5em;
+    text-align: center;
+    border: 0.5px solid black;
+}
+#visibilityContainer .center textarea {
+    border: 0.5px solid black;
+    width: 35em;
+    height: 20em;
+    padding: 5px;
+}
+#visibilityContainer .center button.add_button {
+    border-radius: 2px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 0;
+    background-color: #2196F3;
+    transition: background-color 0.3s;
+    color: #fff;
+    padding: 1em;
+    font-weight: bold;
+}
+#visibilityContainer .center button.add_button:hover {
+    background-color: #51adf6;
+}

@@ -1,0 +1,70 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../css/opensans.ttf');
+}
+
+@font-face {
+	font-family: 'Open Sans Light';
+	src: url('../css/opensans-light.ttf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	margin:0;
+	font-family:'Open Sans', Arial, sans-serif;
+	color:#000;
+	background: black;
+	font-smoothing: antialiased;
+	height: 100%;
+}
+
+#loginPanel{
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin: 0 auto;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border: 1px solid silver;
+	background: white;
+}
+#loginPanel table{
+	margin: 0 auto;
+}
+
+#loginPanel table tr{
+
+}
+
+#loginPanel table tr td{
+	padding-left: 1em;
+	padding-top: 1em;
+}
+input{
+	padding: 0.5em;
+	text-align: center;
+}
+button{
+	border-radius: 2px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 0;
+    background-color: #2196F3;
+    transition: background-color 0.3s;
+    color: #fff;
+    padding: 1em;
+    font-weight: bold;
+}
+button:hover{
+	background-color: #51adf6;
+}
